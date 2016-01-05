@@ -1,0 +1,35 @@
+{
+  "name": "parse-qs",
+  "version": "0.0.0",
+  "description": "parse querystring",
+  "main": "dist/parse.min.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.3.17",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.4",
+    "webpack": "^1.12.9"
+  },
+  "scripts": {
+    "test": "mocha --require babel-core/register || true",
+    "build:lib": "babel src --out-dir lib",
+    "build:umd": "webpack src/parse.js dist/parse.min.js --config webpack.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jl-/parse-qs.git"
+  },
+  "author": "jlz <jlz.cius@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jl-/parse-qs/issues"
+  },
+  "homepage": "https://github.com/jl-/parse-qs#readme"
+}
